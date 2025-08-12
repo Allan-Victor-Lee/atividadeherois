@@ -1,0 +1,37 @@
+class Personagem {
+    constructor(nome, idade, tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo;
+
+
+    };
+
+    atacar() {
+        let ataque = "";
+
+        if (this.tipo == "mago") {
+            ataque = "magia";
+
+        }
+        else if (this.tipo == "guerreiro") {
+            ataque = "espada";
+
+        } else if (this.tipo == "monge") {
+            ataque = "artes marciais";
+
+        } else if (this.tipo == "ninja") {
+            ataque = "shuriken";
+
+        }
+        return ataque;
+    }
+
+
+} let personagem1 = new Personagem("allan", 17, "mago");
+let personagem2 = new Personagem("pedro", 12, "guerreiro");
+
+console.log(`o ${personagem1.tipo} atacou usando ${personagem1.atacar()} `)
+console.log(`o ${personagem2.tipo} atacou usando ${personagem2.atacar()} `)
+
+
